@@ -55,11 +55,13 @@ $( document ).ready(function() {
             },
             password: {
                 required: true,
-                strongPassword: false
             },
             password2: {
                 required: true,
                 equalTo: '#password'
+            },
+            oldPass: {
+                required: true
             },
             cnic: {
                 required: true,
@@ -96,33 +98,36 @@ $( document ).ready(function() {
                 remote: $.validator.format("{0} is already associated with an account."),
             },
             password: {
-                required: 'Please enter your password'
+                required: 'Please enter your password.'
+            },
+            oldPass: {
+                required: 'Please enter your old password.'
             },
             cnic: {
-                required: 'Please enter CNIC',
-                digits: 'CNIC should be numeric',
-                minlength: 'CNIC should be of 12 digits',
-                maxlength: 'CNIC should be equal to 12 digits'
+                required: 'Please enter CNIC.',
+                digits: 'CNIC should be numeric.',
+                minlength: 'CNIC should be of 12 digits.',
+                maxlength: 'CNIC should be equal to 12 digits.'
             },
             pname: {
-                required: 'Please enter person\'s name'
+                required: 'Please enter person\'s name.'
             },
             age: {
-                required: 'Please enter second name',
-                digits: 'Age should be numeric',
-                maxlength: 'Age should be less than 3 digits'
+                required: 'Please enter second name.',
+                digits: 'Age should be numeric.',
+                maxlength: 'Age should be less than 3 digits.'
             },
             dob: {
-                required: 'Please enter Date of birth',
+                required: 'Please enter Date of birth.',
             },
             address: {
-                required: 'Please enter complete address',
+                required: 'Please enter complete address.',
             },
             generalinfo: {
-                required: 'Please enter general information',
+                required: 'Please enter general information.',
             },
             dataType: {
-                required: 'Please choose data type'
+                required: 'Please choose data type.'
             }
 
         },

@@ -13,29 +13,46 @@
   </head>
   <body>
 
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3>Profile</h3>
-      </div>
-      <div class="panel-body">
-          <button class="btn btn-primary" id="showPass">Change Password</button>
-          <button class="btn btn-primary" id="hidePass">Change Password</button>
-          <div class="container-fluid" id="editPass" style="display: none;">
-            <form class="form-validation">
-                <div class="form-group">
-                    <input type="text" name="pass" id="oldPass" class="form-control" placeholder="Enter old password">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="pass" id="newPass" class="form-control" placeholder="Enter new password">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="pass" id="confrmPass" class="form-control" placeholder="Confirm password">
-                </div>
-                </form>
-                <div>
-                  </div>
+    <div class="container-fluid">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3>Profile<button class="btn btn-default pull-right" id="showPass">Change Password</button></h3>
             </div>
-      </div>
+            <div class="panel-body">
+                <div class="col-lg-8">
+      
+                </div>
+                <div class="col-lg-4">
+                    <div class="container-fluid" id="editPass" style="display: none;">
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h3>Change Password<button class="btn btn-default pull-right" id="hidePass">Close</button></h3>
+                            
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-validation">
+                                <div class="form-group">
+                                  <label for="oldPass">Old Password</label>
+                                    <input type="text" name="oldPass" id="oldPass" class="form-control" placeholder="Enter old password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPass">New Password</label>
+                                    <input type="password" name="password" id="newPass" class="form-control" placeholder="Enter new password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confrmPass">Confirm Password</label>
+                                    <input type="password" name="password2" id="confrmPass" class="form-control" placeholder="Confirm password">
+                                </div>
+                                <div class="form-group">
+                                  <button type="submit" class="btn btn-block btn-primary">Change</button>
+                                </div>
+                            </form>
+                        </div>
+                  </div>
+                </div>
+                </div>
+          </div>
+          </div>
     </div>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
  <script src="js/jquery-3.2.1.min.js"></script>
