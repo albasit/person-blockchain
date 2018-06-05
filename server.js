@@ -9,17 +9,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname+'/public/pages/index.html');
+    res.sendFile(__dirname+'/public/pages/login.html');
  });
 
- app.get("/addData", function(req, res) {
-    res.sendFile(__dirname+'/public/pages/addData.html');
+ app.get("/login", function(req, res) {
+  res.sendFile(__dirname+'/public/pages/login.html');
+});
+ app.get("/user/addData", function(req, res) {
+    res.sendFile(__dirname+'/public/pages/user/addData.html');
  });
- app.get("/profile", function(req, res) {
-    res.sendFile(__dirname+'/public/pages/profile.html');
+ app.get("/user/profile", function(req, res) {
+    res.sendFile(__dirname+'/public/pages/user/profile.html');
  });
- app.get("/viewData", function(req, res) {
-    res.sendFile(__dirname+'/public/pages/viewData.html');
+ app.get("/user/viewData", function(req, res) {
+    res.sendFile(__dirname+'/public/pages/user/viewData.html');
  });
 
 
@@ -32,9 +35,13 @@ app.get("/", function(req, res) {
   
   connection.connect();
   
-  app.post('/addData', function(req, res) {
+  app.post('/login', function(req, res) {
+    res.render('/user/index');
+  });
+  app.post('/user/addData', function(req, res) {
     console.log(req.body.cnic);
   });
+
   
   connection.end();
 
