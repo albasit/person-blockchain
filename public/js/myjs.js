@@ -33,6 +33,21 @@ $('#dataType').change(function(){
     }
   });
 
+  $('#role').change(function(){
+    opt = $(this).val();
+    switch(opt) {
+      case 'viewData':
+      $('#dataField').css({'display':'block'});
+      break;
+      case 'all':
+      $('#dataField').css({'display':'block'});
+      break;
+      default:
+      $('#dataField').css({'display':'none'});
+      break;
+    }
+  });
+
 //   $(document).ready(function() {
 // $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
 //     e.preventDefault();

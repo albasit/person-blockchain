@@ -15,29 +15,19 @@
     <div class="row">
       <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 bhoechie-tab-menu">
           <div class="list-group">
-              <a href="addData" class="list-group-item active text-center">
-                  <h3 class="glyphicon glyphicon-pencil"></h3><br/><b>Add Data</b>
-              </a>
-              <a href="viewData" class="list-group-item text-center">
-                  <h3 class="glyphicon glyphicon-eye-open"></h3><br/><b>View Data</b>
-              </a>
-              <a href="profile" class="list-group-item text-center">
-                  <h3 class="glyphicon glyphicon-user"></h3><br/><b>Profile</b>
-              </a>
-              <a href="#" class="list-group-item text-center">
-                  <h3 class="glyphicon glyphicon-off" style="color: red"></h3><br/><b>Logout</b>
-              </a>
-          </div>        <div class="list-group">
-            <a href="admin/addUser" class="list-group-item active text-center">
+            <a href="addUser" class="list-group-item text-center">
+                <h3 class="glyphicon glyphicon-dashboard"></h3><br/><b>Dashboard</b>
+            </a>
+            <a href="addUser" class="list-group-item text-center">
                 <h3 class="glyphicon glyphicon-user"></h3><br/><b>Add User</b>
             </a>
-            <a href="admin/viewUser" class="list-group-item text-center">
+            <a href="viewUser" class="list-group-item text-center">
                 <h3 class="glyphicon glyphicon-eye-open"></h3><br/><b>View User</b>
             </a>
-            <a href="admin/assignRole" class="list-group-item text-center">
+            <a href="assignRole" class="list-group-item active text-center">
                 <h3 class="glyphicon glyphicon-list"></h3><br/><b>Assign Role</b>
             </a>
-            <a href="admin/profile" class="list-group-item text-center">
+            <a href="profile" class="list-group-item text-center">
                 <h3 class="glyphicon glyphicon-user"></h3><br/><b>Profile</b>
             </a>
             <a href="#" class="list-group-item text-center">
@@ -50,7 +40,7 @@
       <div class="container-fluid col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-1 col-xs-offset-1">
           <div class="panel panel-primary">
               <div class="panel-heading">
-                  <h3>Add Person Data</h3>
+                  <h3>Assign Role</h3>
               </div>
               <div class="panel-body">
                   <form method="POST" action="/addData" class="form-validation">
@@ -60,20 +50,42 @@
                           <hr>
                       </div>
                       <div class="form-group">
-                          <label for="candidatesSelect">CNIC</label>
-                          <input type="text" name="cnic" placeholder="Enter CNIC" class="form-control" id="cnic">
+                          <label for="oid">Officer ID</label>
+                          <input type="text" name="oid" placeholder="Enter officer ID" class="form-control" id="oid">
                       </div>
                       <div class="form-group">
-                          <label for="dataType">Data Type</label>
-                          <select class="form-control" name="dataType" id="dataType">
-                              <option value="">Select Data Type</option>
-                              <option value="date">DOB</option>
-                              <option value="address">Address</option>
-                              <option value="name">Name</option>
-                              <option value="age">Age</option>
-                              <option value="general">General Information</option>
-                          </select>
+                            <label for="role">Roles</label>
+                            <select class="form-control" name="role" id="role">
+                                <option value="">Select Roles</option>
+                                <option value="addData">Add Data</option>
+                                <option value="viewData">View Data</option>
+                                <option value="mData">Modify Data</option>
+                                <option value="all">All</option>
+                            </select>
                       </div>
+                      <div class="form-group" id="dataField" style="display: none">
+                        <label for="checkboxes">Choose Data Types</label>
+                          <label class="checkbox-inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                            DOB
+                          </label>
+                          <label class="checkbox-inline" for="checkboxes-1">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                            Name
+                          </label>
+                          <label class="checkbox-inline" for="checkboxes-2">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                            Address
+                          </label>
+                          <label class="checkbox-inline" for="checkboxes-3">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                            Age
+                          </label>
+                          <label class="checkbox-inline" for="checkboxes-4">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-4" value="4">
+                            General Information
+                          </label>
+                        </div>
                       <div class="form-group" id="data" style="display: none;">
 
                       </div>

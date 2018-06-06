@@ -53,6 +53,10 @@ $( document ).ready(function() {
                 // remote: "http://localhost:3000/inputValidator"
                 matches: '@gmail.com'
             },
+            userid: {
+                required: true,
+                digits: true
+            },
             password: {
                 required: true,
             },
@@ -77,6 +81,7 @@ $( document ).ready(function() {
             },
             pname: {
                 required: true,
+                digits: false
             },
             dob: {
                 required: true,
@@ -89,6 +94,19 @@ $( document ).ready(function() {
             },
             dataType: {
                 required: true
+            },
+            userName: {
+                required: true
+            },
+            org: {
+                required: true
+            },
+            oid: {
+                required: true,
+                digits: true
+            },
+            role: {
+                required: true
             }
         },
         messages: {
@@ -99,6 +117,10 @@ $( document ).ready(function() {
             },
             password: {
                 required: 'Please enter your password.'
+            },
+            userid: {
+                required: 'Please enter userid.',
+                digits: 'User ID should be numeric'
             },
             oldPass: {
                 required: 'Please enter your old password.'
@@ -128,6 +150,19 @@ $( document ).ready(function() {
             },
             dataType: {
                 required: 'Please choose data type.'
+            },
+            userName: {
+                required: 'Please enter officer\'s name.'
+            },
+            org: {
+                required: 'Please choose organization.'
+            },
+            oid: {
+                required: 'Please enter officer\'s id.',
+                digits: 'Officer ID should be numeric.'
+            },
+            role: {
+                required: 'Please choose officer\'s role.'
             }
 
         },
