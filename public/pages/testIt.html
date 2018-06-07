@@ -13,19 +13,19 @@
     <link href="../../css/style.css" rel="stylesheet">
   </head>
   <body>
-
-
-<form method="POST" action="/testData" >
-
-    
-       <input class="form-control" type="number" name="user_id">
-       <input class="form-control" type ="text" name="user_name">
-
-    <div class="form-group">
-        <button type="submit" name ="testData" class="btn btn-primary pull-right">ADD</button>
-    </div>
-</form>
-
+    <div class="container col-lg-offset-3 col-lg-4" style="margin-top: 100px;">
+        <form method="POST" action="/testData" >
+          <div class="form-group">
+              <input class="form-control" type="number" placeholder="Enter User ID" name="user_id">
+          </div>
+          <div class="form-group">
+              <input class="form-control" type ="text" placeholder="Enter user name" name="user_name">
+          </div>
+       <div class="form-group">
+           <button type="submit" name ="testData" class="btn btn-primary pull-right">ADD</button>
+       </div>
+   </form>
+</div>   
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../../js/jquery-3.2.1.min.js"></script>

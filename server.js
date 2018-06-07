@@ -37,6 +37,9 @@ app.get("/admin/assignRole", function(req, res) {
 app.get("/admin/profile", function(req, res) {
   res.sendFile(__dirname+'/public/pages/admin/profile.html');
 });
+app.get("/admin/dataType", function(req, res) {
+  res.sendFile(__dirname+'/public/pages/admin/dataType.html');
+});
 
 //User routes
 app.get("/user/index", function(req, res) {
@@ -49,7 +52,7 @@ app.get("/user/index", function(req, res) {
     res.sendFile(__dirname+'/public/pages/user/profile.html');
  });
  app.get("/user/viewData", function(req, res) {
-    res.sendFile('./pages/user/viewData.html');
+    res.sendFile(__dirname+'/public/pages/user/viewData.html');
  });
 
 
@@ -88,12 +91,12 @@ app.get("/user/index", function(req, res) {
         con.connect(function(err) {
           if (err) throw err;
           console.log("Connected!");
-          /*var sql = "INSERT INTO user (user_id, user_name) VALUES ?";
+          var sql = "INSERT INTO user (user_id, user_name) VALUES ?";
           var values = [[user_id,user_name]];
           con.query(sql, [values], function (err, result) {
             if (err) throw err;
             console.log("Number of records inserted: " + result.affectedRows);
-          });//insert into user  */
+          });//insert into user
           
           con.query("SELECT * FROM user", function (err, result, fields) {
             if (err) throw err;

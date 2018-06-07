@@ -107,6 +107,9 @@ $( document ).ready(function() {
             },
             role: {
                 required: true
+            },
+            dtname: {
+                required: true
             }
         },
         messages: {
@@ -163,6 +166,9 @@ $( document ).ready(function() {
             },
             role: {
                 required: 'Please choose officer\'s role.'
+            },
+            dtname: {
+                required: 'Please enter data type name.'
             }
 
         },
