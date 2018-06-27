@@ -25,14 +25,14 @@ app.get("/testit", function(req, res) {
  app.get("/admin/index", function(req, res) {
   res.sendFile(__dirname+'/public/pages/admin/index.html');
 });
- app.get("/admin/addUser", function(req, res) {
-  res.sendFile(__dirname+'/public/pages/admin/addUser.html');
+ app.get("/admin/addStudent", function(req, res) {
+  res.sendFile(__dirname+'/public/pages/admin/addStudent.html');
 });
-app.get("/admin/viewUser", function(req, res) {
-  res.sendFile(__dirname+'/public/pages/admin/viewUser.html');
+app.get("/admin/addTeacher", function(req, res) {
+  res.sendFile(__dirname+'/public/pages/admin/addTeacher.html');
 });
-app.get("/admin/assignRole", function(req, res) {
-  res.sendFile(__dirname+'/public/pages/admin/assignRole.html');
+app.get("/admin/addCourse", function(req, res) {
+  res.sendFile(__dirname+'/public/pages/admin/addCourse.html');
 });
 app.get("/admin/profile", function(req, res) {
   res.sendFile(__dirname+'/public/pages/admin/profile.html');
