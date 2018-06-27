@@ -67,29 +67,29 @@ $( document ).ready(function() {
             oldPass: {
                 required: true
             },
-            cnic: {
+            sid: {
                 required: true,
                 digits: true,
-                minlength: 12,
-                maxlength: 12
+                minlength: 8,
+                maxlength: 8
             },
-            age: {
+            tid: {
                 required: true,
                 digits: true,
-                minlength: 1,
-                maxlength: 3
+                minlength: 5,
+                maxlength: 5
             },
-            pname: {
+            sname: {
                 required: true,
                 digits: false
             },
-            dob: {
+            tname: {
                 required: true,
             },
-            address: {
+            cname: {
                 required: true,
             },
-            generalinfo: {
+            ccode: {
                 required: true
             },
             dataType: {
@@ -128,28 +128,29 @@ $( document ).ready(function() {
             oldPass: {
                 required: 'Please enter your old password.'
             },
-            cnic: {
-                required: 'Please enter CNIC.',
+            sid: {
+                required: 'Please enter student ID.',
                 digits: 'CNIC should be numeric.',
-                minlength: 'CNIC should be of 12 digits.',
-                maxlength: 'CNIC should be equal to 12 digits.'
+                minlength: 'Student ID should be of 8 digits.',
+                maxlength: 'Student ID should be equal to 8 digits.'
             },
-            pname: {
-                required: 'Please enter person\'s name.'
+            sname: {
+                required: 'Please enter student\'s name.'
             },
-            age: {
-                required: 'Please enter second name.',
-                digits: 'Age should be numeric.',
-                maxlength: 'Age should be less than 3 digits.'
+            tid: {
+                required: 'Please enter teacher ID.',
+                digits: 'Teacher ID should be numeric.',
+                maxlength: 'Teacher ID should be of 5 digits.',
+                minlength: 'Teacher ID should be equal to 5 digits.'
             },
-            dob: {
-                required: 'Please enter Date of birth.',
+            cname: {
+                required: 'Please enter course name.',
             },
-            address: {
-                required: 'Please enter complete address.',
+            ccode: {
+                required: 'Please enter course code.',
             },
-            generalinfo: {
-                required: 'Please enter general information.',
+            tname: {
+                required: 'Please enter teacher name.',
             },
             dataType: {
                 required: 'Please choose data type.'

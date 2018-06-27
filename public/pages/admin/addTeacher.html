@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Person Bio-data | Blockchain</title>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 bhoechie-tab-menu">
+        <div class="list-group">
+            <a href="index" class="list-group-item text-center">
+                <h3 class="glyphicon glyphicon-dashboard"></h3><br/><b>Dashboard</b>
+            </a>
+            <a href="addStudent" class="list-group-item text-center">
+                <h3 class="glyphicon glyphicon-education"></h3><br/><b>Student</b>
+            </a>
+            <a href="addTeacher" class="list-group-item active text-center">
+                <h3 class="glyphicon glyphicon-user"></h3><br/><b>Teacher</b>
+            </a>
+            <a href="addCourse" class="list-group-item text-center">
+                <h3 class="glyphicon glyphicon-book"></h3><br/><b>Course</b>
+            </a>
+            <a href="profile" class="list-group-item text-center">
+                <h3 class="glyphicon glyphicon-user"></h3><br/><b>Profile</b>
+            </a>
+            <a href="#" class="list-group-item text-center">
+                <h3 class="glyphicon glyphicon-off" style="color: red"></h3><br/><b>Logout</b>
+            </a>
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-11 col-sm-9 col-xs-9 bhoechie-tab">
+    <div class="bhoechie-tab-content active">
+      <div class="container-fluid col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+        <div class="panel with-nav-tabs panel-default">
+            <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1default" data-toggle="tab">Add Teacher</a></li>
+                        <li><a href="#tab2default" data-toggle="tab">View Teacher</a></li>
+                    </ul>
+            </div>
+            <div class="panel-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab1default">
+                        <div class="panel panel-primary col-lg-8 col-lg-offset-2">
+                            <div class="panel-heading">
+                                <h3>Add Teacher</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form method="POST" action="" class="form-validation">
+                                    <div class="form-group">
+                                        <p class="text-blue"><i class="glyphicon glyphicon-hand-right"></i> Please provide the
+                                            info</p>
+                                        <hr>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tid">Teacher ID</label>
+                                        <input type="text" name="tid" placeholder="Enter teacher ID" class="form-control" id="tid">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="ccode">Teacher name</label>
+                                      <input type="text" name="tname" placeholder="Enter teacher name" class="form-control" id="tname">
+                                  </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary pull-right">ADD</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2default">
+                            <div class="panel-body">
+                                    <form class="form form-validation">
+                                        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                            <label for="tid">Teacher ID</label>
+                                            <input type="text" class="form-control" id="tid" name="tid"
+                                                   placeholder="Enter teacher ID">
+                                        </div>
+                                        <div class="form-group col-lg-1 col-md-1 col-sm-2 col-xs-2"
+                                             style="margin-top: 25px">
+                                            <button type="submit" class="btn btn-primary" id="viewData"
+                                                    name="viewData">Show
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="panel panel-collapse panel-primary">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <th>#</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>12345</td>
+                                                    <td>Dr. Fakhar-ul-Islam Lodhi</td>
+                                                    <td><a href="#" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
+                                                        <a href="#" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>12123</td>
+                                                    <td>Dr. Qaiser S Durrani</td>
+                                                    <td><a href="#" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
+                                                        <a href="#" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>
+  </div>
+</div>
+</div>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="../../js/jquery-3.2.1.min.js"></script>
+ <script src="../../js/jquery.validate.js"></script>
+ <script src="../../js/validator.formate.js"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="../../js/bootstrap.min.js"></script>
+ <script src="../../js/web3.min.js"></script>
+ <script src="../../js/truffle-contract.js"></script>
+ <script src="../../js/app.js"></script>
+ <script src="../../js/myjs.js"></script>
+</body>
+</html>
